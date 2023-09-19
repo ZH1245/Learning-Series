@@ -7,6 +7,11 @@ import { BiArrowBack } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
 import SignupPage from "./SignupPage";
 import { Separator } from "@/components/shadcn/ui/separator";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Register | TodoApp",
+  description: "Register to use Todo App",
+};
 
 function RegistrationPage() {
   return (
@@ -29,23 +34,25 @@ function RegistrationPage() {
           <span>OR</span>
           <Separator />
         </div>
-        <Button variant="secondary" className="gap-2">
-          <FcGoogle size={20} />
-          Continue with Google
-        </Button>
-        <div className="flex flex-col gap-2">
-          <Link
-            href="/login"
-            className={cn(
-              buttonVariants({
-                variant: "secondary",
-              }),
-              "gap-2"
-            )}
-          >
-            <BiArrowBack />
-            <span>Back to Login</span>
-          </Link>
+        <div className="flex flex-col gap-3">
+          <Button variant="secondary" className="gap-2">
+            <FcGoogle size={20} />
+            Continue with Google
+          </Button>
+          <div className="flex flex-col gap-2">
+            <Link
+              href="/login"
+              className={cn(
+                buttonVariants({
+                  variant: "secondary",
+                }),
+                "gap-2"
+              )}
+            >
+              <BiArrowBack />
+              <span>Back to Login</span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

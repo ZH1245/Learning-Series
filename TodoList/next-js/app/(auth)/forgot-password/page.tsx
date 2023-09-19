@@ -7,6 +7,11 @@ import { BiArrowBack } from "react-icons/bi";
 import ResetForm from "./ResetForm";
 import { Separator } from "@/components/shadcn/ui/separator";
 import { redirect } from "next/navigation";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Reset Password | Todo",
+  description: "Forgot your password? Reset it with registered email.",
+};
 
 function ForgotPasswordPage() {
   return (

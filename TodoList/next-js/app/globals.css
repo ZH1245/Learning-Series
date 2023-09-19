@@ -66,7 +66,7 @@
   }
 }
   */
-  
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -90,7 +90,7 @@
     --ring: 262.1 83.3% 57.8%;
     --radius: 0.3rem;
   }
- 
+
   .dark {
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;
@@ -120,6 +120,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground transition-colors;
+    @apply bg-background text-foreground transition-colors duration-300;
   }
 }

@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import LoginForm, { LoginFormProps } from "./LoginForm";
 
 export const metadata: Metadata = {
-  title: "Login | Todo",
+  title: "Login | TodoApp",
   description: "Welcome to Todo App",
 };
 
@@ -53,7 +53,7 @@ function LoginPage() {
             <span className="text-sm">{"Forgot Password?"}</span>
             <Link
               href="/forgot-password"
-              className={buttonVariants({ variant: "link" })}
+              className={cn(buttonVariants({ variant: "link" }), "px-0")}
             >
               Reset Password
             </Link>

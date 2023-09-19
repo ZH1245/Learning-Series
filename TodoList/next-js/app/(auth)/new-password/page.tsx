@@ -7,6 +7,11 @@ import React from "react";
 import { BiArrowBack } from "react-icons/bi";
 import NewPasswordForm from "./NewPasswordForm";
 import { redirect } from "next/navigation";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "OTP Verification | TodoApp",
+  description: "OTP Verification and Password Reset.",
+};
 
 function NewPasswordPage() {
   return (
