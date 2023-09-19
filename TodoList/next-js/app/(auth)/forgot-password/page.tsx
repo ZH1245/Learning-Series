@@ -6,6 +6,7 @@ import React from "react";
 import { BiArrowBack } from "react-icons/bi";
 import ResetForm from "./ResetForm";
 import { Separator } from "@/components/shadcn/ui/separator";
+import { redirect } from "next/navigation";
 
 function ForgotPasswordPage() {
   return (
@@ -23,7 +24,13 @@ function ForgotPasswordPage() {
           </div>
           <ThemeSwitcher />
         </div>
-        <ResetForm />
+        <ResetForm
+          submitFn={async (values) => {
+            "use server";
+            const email = values.get("email");
+            redirect(`/new-password?email=${email}`);
+          }}
+        />
         <Separator />
         <Link
           href="/login"
